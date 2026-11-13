@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body{
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            color:white;
+            position: sticky;
+            top: 0;
+        }
+        .Title{
+            display: flex;
+            align-items: center;
+            line-height: 0.5;
+        }
+        .Title img{
+            width: 70px;
+            height: 70px;
+        }
+        .navigation{
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .navigation a{
+            color: white;
+            text-decoration: none;
+        }
+        .about-Container{
+            padding: 3%;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(34, 34, 36);     
+            
+        }
+        .about{
+            line-height: 0.6;
+            color: white;
+        }
+        .about p{
+            line-height: 1.3;
+        }
+        .about-btns button{
+            background-color: inherit;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .about-btns button:hover{
+            background-color: green;
+            color: white;
+        }
+        .about-btns a{
+            text-decoration: none;
+            color: white;
+        }
+        .project-container{
+            background-color: rgb(34, 34, 36);
+            color: white;
+            padding: 3%;
+        }
+        .project-container h1, .education-container h1, .whatido-container h1{
+            text-align: center;
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+        .card-parent{
+            display: flex;
+            gap: 20px;
+        }
+        .card{
+            width: 30%;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+        .card img{
+            width: 100%;
+        }
+        .card p{
+            font-size: 0.87;
+            margin-bottom: 20px;
+        } 
+        .card a{
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+        .card button{
+            border: 1px solid gray;
+            background-color: inherit;
+            padding: 10px;
+        }
+        .card button:hover {
+            background-color: green;
+        }
+
+        .education-container{
+            padding: 3%;
+            background-color: rgb(34, 34, 36);
+            color: white;
+        }
+        .education-container table,.education-container th,.education-container td,.education-container tr{
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 13px;
+        }
+        .education-container table{
+            width: 100%;
+        }
+        .education-container th{
+            background-color: green;
+        }
+        .acheivements-contact-container{
+            display: flex;
+            background-color: rgb(34, 34, 36);
+            color: white;
+            padding: 3%;
+        }
+        .acheivements-container,.contact-container{
+            width: 50%;
+            line-height: 1.5;
+        }
+        .acheivements-contact-container h1{
+            margin: 0%;
+        }
+        ul{
+            padding: 0%;
+        }
+        .acheivements-contact-container i{
+            color: rgb(0, 255, 0);
+            margin-right: 10px;
+        }
+        .contact-container a{
+            text-decoration: none;
+            color: white;
+        }
+
+        i {
+            color: green;
+            margin-right: 10px;
+        }
+
+        .whatido-container {
+            background-color: rgb(34, 34, 36);
+            color: whitesmoke;
+            padding: 3%;
+        }
+
+        .whatido-card-parent {
+            display: flex;
+            gap: 20px;
+        }
+
+        .whatidocard {
+            width: 30%;
+            padding: 50px 30px;
+            border: 1px;
+            background-color: rgba(10, 10, 10, 0.95);
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .whatidocard h3 {
+            text-align: center;
+        }
+
+        .whatidocard p {
+            font-size: small;
+        }
+
+        .whatidocard i {
+            font-size: 2.5rem;
+        }
+
+        .declaration-container{
+            background-color: rgba(10, 10, 10, 0.9);
+            padding: 0% 3% 3% 3%;
+            
+        }
+        .declaration-container h1{
+            margin: 0px 0px 10px 0px;
+            color: whitesmoke;
+            text-align: center;
+        }
+        .sign{
+            display: flex;
+            justify-content: space-between;
+            color: gray;
+            border: 1px solid grey;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div class ="header">
+          <div class ="Title">
+              <img src="https://www.placements.codegnan.com/codegnan-logo/circle-logo.webp"
+              width="5%" alt="logo"/>
+    
+              <div>
+                  <h1>Rohitha Jujjuri</h1>
+                  <p>Web developer | Student</p>
+              </div>
+         </div>
+           <div class = "navigation">
+               <a href="#">About me </a>
+               <a href="#">Achievements </a>
+               <a href="#">Education </a>
+               <a href="#">Projects </a>
+               <a href="#">Contact </a>
+          </div>
+    </div>
+
+    <div class = "about-Container">
+        <div class = "about">
+            <h1>Hi, I'm <span style="color: rgb(0, 255, 0);">Rohitha Jujjuri</span></h1>
+            <h1>I build simple and clean websites</h1>
+            <p>I am a passionate web developer with a keen eye <br/> for design and a love for creating user-friendly experiences.</p>
+
+            <div class = "about-btns">
+                <button><a href="">View Projects</a></button>
+                <button><a href="">Download CV</a></button>
+            </div>
+        </div>
+        <img src="./Rohitha.png" width="15%" alt="my_picture"/>
+    </div>
+
+    <div class="whatido-container">
+        <h1>What I Do</h1>
+        <div class="whatido-card-parent">
+            <div class="whatidocard">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore
+                </p>
+            </div>
+            <div class="whatidocard">
+                <i class="fa-solid fa-code"></i>
+                <h3>Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore.
+                </p>
+            </div>
+            <div class="whatidocard">
+                <i class="fa-solid fa-palette"></i>
+                <h3>UI/UX</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore
+                </p>
+            </div>
+            <div class="whatidocard">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>SEO Analytics</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore
+                </p>
+            </div>
+            <div class="whatidocard">
+                <i class="fa-solid fa-code"></i>
+                <h3>Performance</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore
+                </p>
+            </div>
+            <div class="whatidocard">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Support</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet obcaecati, voluptatibus inventore
+                </p>
+            </div>
+        </div>
+    </div>
+
+     <div class="project-container">
+        <h1>Projects</h1>
+        <div class="card-parent">
+            <div class="card">
+            <img src="https://images.ui8.net/cdn-cgi/image/width=1520,quality=85,format=auto,fit=scale-down,onerror=redirect/uploads/4_1758712245907.png" alt="">
+            <h3>1.Blcokchain powered supplychain</h3>
+            <p>Academical project on electronic product tracking using html,css,js,Django,Mysql and UI/UX Design</p>
+            <button><a href="#">View project</a></button>
+        </div>
+         <div class="card">
+            <img src="https://images.ui8.net/cdn-cgi/image/width=1520,quality=85,format=auto,fit=scale-down,onerror=redirect/uploads/4_1758712245907.png" alt="">
+            <h3>2.UI/UX website Redesign</h3>
+            <p>Redesigned an e-learning platform using figma,canva,html,css and js</p>
+             <button><a href="#">View project</a></button>
+        </div>
+         <div class="card">
+            <img src="https://images.ui8.net/cdn-cgi/image/width=1520,quality=85,format=auto,fit=scale-down,onerror=redirect/uploads/4_1758712245907.png" alt="">
+            <h3>3.E-commerce website</h3>
+            <p>A Console based project using core java</p>
+            <button><a href="#">View project</a></button>
+        </div>
+        </div>
+    </div>
+
+    <div class="education-container">
+        <h1>Education</h1>
+        <table>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>SSC</td>
+                <td>Narayana E-techno school</td>
+                <td>2020</td>
+                <td>Vijayawada,GPD</td>
+            </tr>
+            <tr>
+                <td>B-tech</td>
+                <td>ALIET</td>
+                <td>2026</td>
+                <td>Vijayawada,Benz Circle</td>
+            </tr>
+        </table>
+    </div>    
+
+    <div class="acheivements-contact-container">
+        <div class = "acheivements-container">
+           <h1>Acheivements</h1>
+            <ul type="none"> 
+               <li><i class="fa-solid fa-circle-check"></i>Completed HTML fundamental course</li>
+               <li><i class="fa-solid fa-circle-check"></i>Small projects using HTML</li>
+               <li><i class="fa-solid fa-circle-check"></i>Learning and improving everyday</li>
+               <li><i class="fa-solid fa-circle-check"></i>problem solving and logical thinking</li>
+            </ul>
+       </div>
+
+      <div class="contact-container">
+         <h1>Contact</h1>
+           <div>
+              <i class="fa-solid fa-envelope"></i>
+              Email:
+              <a href="">rohithajujjuri0725@gmail.com</a>
+          </div>
+
+          <div>
+              <i class="fa-brands fa-github"></i>
+              Github:
+              <a href="">https://github.com/Rohitharohi25</a>
+          </div>
+          <div>
+              <i class="fa-solid fa-location-dot"></i>
+              Location:Vijayawada,AP
+          </div>
+      </div>
+  </div>
+
+     <footer class="declaration-container">
+          <h1>Declaration</h1>
+          <div class="sign">
+              <p>I confirm that the information provided above is accurate to the best of my knowledge.</p>
+              <p>-- Jujjuri Rohitha</p>
+          </div>
+     </footer>
+
+</body>
+</html>
